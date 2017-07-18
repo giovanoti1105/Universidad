@@ -1,0 +1,15 @@
+/* TEAM */
+Creator: Oscar Bocanegra
+Contact: oscargiovanni[at]gmail.com
+From: Bogota, Colombia.
+
+/* THANKS */
+Profesor: 
+Universidad: 
+
+/* SITE */
+Lenguaje: Español
+Standars: HTML5, CSS, JavaScript
+
+
+averiguar humans.txt pagina

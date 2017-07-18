@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+F:\Proyectos\MiRutaSITP\.metadata\.plugins\org.eclipse.jdt.core
+2356387984.index

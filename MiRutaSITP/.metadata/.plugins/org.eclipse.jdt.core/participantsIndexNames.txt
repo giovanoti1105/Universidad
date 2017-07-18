@@ -1,0 +1,7 @@
+INDEX VERSION 1.126
+F:\Proyectos\MiRutaSITP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\319924560.index
+\COPAMERICA2015\src
+F:\Proyectos\MiRutaSITP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\270936246.index
+\COPAMERICA2015\src
+F:\Proyectos\MiRutaSITP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3044520642.index
+\COPAMERICA2015\src

@@ -1,0 +1,2 @@
+INDEX VERSION 1.122+F:\Proyectos\MiRutaSITP\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2356387984.index
