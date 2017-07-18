@@ -1,0 +1,54 @@
+@CHARSET "ISO-8859-1";
+.principal
+{
+	border:2px solid;
+	border-radius:25px;
+	background-color: #8181F7;
+	text-align: center;
+	letter-spacing: 20px;
+	color: ffffff;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.datosPersonales
+{
+	border:2px solid;
+	background-color: #8181F7;
+	text-align: center;
+	color: ffffff;
+	width: 550px;
+	height: 90px;
+}
+
+.aficiones
+{
+	border:2px solid;
+	background-color: #8181F7;
+	text-align: center;
+	color: ffffff;
+	width: 450px;
+	height: 90px;
+}
+#datosPer
+{
+	background-color: blue;
+	border-radius:25px;
+	width: 200px;
+	height: 200px;
+}
+.enfasis {
+font-style: italic;
+font-size: 1.3em;
+}
+.colores1 {
+font-size: 1.5em;
+font-style: italic;
+color: Blue;
+background: Yellow;
+}
+.colores2 {
+font-size: 0.8em;
+font-style: italic;
+color: Yellow;
+background: Blue;
+}

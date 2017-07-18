@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+
+	<faces-config xmlns="http://java.sun.com/JSF/Configuration">
+		<application>
+			<locale-config>
+				<default-locale>en</default-locale>
+			</locale-config>
+			<view-handler>com.sun.facelets.FaceletPortletViewHandler
+			</view-handler>
+		</application>
+	</faces-config>
+
+	<navigation-rule>
+		<from-view-id>/index.xhtml</from-view-id>
+		
+			<navigation-case>
+				<from-outcome>test</from-outcome>
+				<to-view-id>/test.jsp</to-view-id>
+			</navigation-case>
+		
+			<navigation-case>
+				<from-outcome>mostrarInformacion</from-outcome>
+				<to-view-id>/mostrarInformacion.jsp</to-view-id>
+			</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/mostrarInformacion.jsp</from-view-id>
+			<navigation-case>
+				<from-outcome>volver</from-outcome>
+				<to-view-id>/index.xhtml</to-view-id>
+			</navigation-case>
+			
+			<navigation-case>
+				<from-view-id>/test.jsp</from-view-id>
+				<from-outcome>mostrarInformacion</from-outcome>
+				<to-view-id>/mostrarInformacion.jsp</to-view-id>
+			</navigation-case>
+			
+			<message-bundle>
+			    mensajes.properties
+			</message-bundle>
+			
+	</navigation-rule>
+	
+	<managed-bean>
+		<managed-bean-name>cuestionario</managed-bean-name>
+		<managed-bean-class>cuestionario.Cuestionario</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+</faces-config>

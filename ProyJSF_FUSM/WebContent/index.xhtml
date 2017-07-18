@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<f:loadBundle basename="mensajes" var="msjs"/>
+	<head>
+		<link rel="stylesheet" href="CSS/estilos.css" type="text/css"/>
+			
+			<title>
+				<h:outputText value="#{msjs.titulo}"/>
+			</title>
+	</head>
+	
+	<body>
+	<div class="principal">
+	Bienvenidos al Sistema de Encuestas
+	</div>
+		<h:form>
+			<center>
+				<h:outputText value="#{msjs.bienvenida}" styleclass="enfasis"/>
+			</center>
+			<div class="datosPersonales" align="left">
+			<h:outputText value="#{msjs.nombre}"/>
+			<h:inputText value="#{cuestionario.nombre}"/>
+			<h:outputText value="#{msjs.correo}"/>
+			<h:inputText value="#{cuestionario.correo}"/>
+			</div>
+			<br/>
+			<div class="aficiones">
+				<h:outputText value="#{msjs.aficiones}"/>
+					<h:selectManyCheckbox value="#{cuestionario.aficiones}">
+						<f:selectItem itemValue="musica" itemLabel="Musica"/>
+						<f:selectItem itemValue="cine" itemLabel="Cine"/>
+						<f:selectItem itemValue="pesca" itemLabel="Pesca"/>
+						<f:selectItem itemValue="deporte" itemLabel="Deporte"/>
+						<f:selectItem itemValue="lectura" itemLabel="Lectura"/>
+					</h:selectManyCheckbox>
+					
+					<h:selectOneRadio value="#{cuestionario.fumador}">
+						<f:selectItem itemValue="si" itemLabel="Fumador"/>
+						<f:selectItem itemValue="no" itemLabel="No fumador"/>
+					</h:selectOneRadio>
+				</div>
+				<h:outputText value="#{msjs.tabaco}"/>
+				<h:outputLink value="http://www.hoylodejo.com/">
+					<h:outputText value="#{msjs.pinche}"/>
+				</h:outputLink>
+				<div class="datosPersonales">
+					<h:outputText value="#{msjs.sistema}"/>
+					<h:selectOneMenu value="#{cuestionario.sistema}">
+						<f:selectItem itemValue="windows 98" itemLabel="Windows 98"/>
+						<f:selectItem itemValue="windows xp" itemLabel="Windows XP"/>
+						<f:selectItem itemValue="suse" itemLabel="Suse"/>
+						<f:selectItem itemValue="red hat" itemLabel="Red Hat"/>
+						<f:selectItem itemValue="ubuntu" itemLabel="Ubuntu"/>
+					</h:selectOneMenu>
+					<h:outputText value="#{msjs.comidas}"/>
+				</div >
+				<div class="datosPersonales">
+					<h:selectManyMenu value="#{cuestionario.comidas}">
+						<f:selectItem itemValue="carnes" itemLabel="Carnes"/>
+						<f:selectItem itemValue="pescados" itemLabel="Pescados"/>
+						<f:selectItem itemValue="legumbres" itemLabel="Legumbres"/>
+						<f:selectItem itemValue="pastas" itemLabel="Pastas"/>
+						<f:selectItem itemValue="sopas" itemLabel="Sopas"/>
+					</h:selectManyMenu>
+				</div>
+				<div class="datosPersonales">
+				<h:outputText value="#{msjs.estado}"/>
+				<h:selectOneListbox value="#{cuestionario.estado}">
+					<f:selectItem itemValue="soltero" itemLabel="Soltero"/>
+					<f:selectItem itemValue="casado" itemLabel="Casado"/>
+					<f:selectItem itemValue="divorciado" itemLabel="Divorciado"/>
+					<f:selectItem itemValue="separado" itemLabel="Separado"/>
+				</h:selectOneListbox>
+				</div>
+				<div class="datosPersonales">
+					<h:outputText value="#{msjs.lenguajes}"/>
+					<h:selectManyListbox value="#{cuestionario.lenguajes}">
+						<f:selectItem itemValue="c" itemLabel="c"/>
+						<f:selectItem itemValue="c++" itemLabel="c++"/>
+						<f:selectItem itemValue="java" itemLabel="Java"/>
+						<f:selectItem itemValue="Visual basic" itemLabel="Visual basic"/>
+						<f:selectItem itemValue="modula2" itemLabel="Modula 2"/>
+					</h:selectManyListbox>
+				</div>
+				<div class="datosPersonales">
+					<h:outputText value="#{msjs.comentario}"/>
+					<h:inputTextarea rows="10" cols="50" value="Escribir aqui..."/>
+				</div>
+				<div class="datosPersonales">
+					<h:commandButton value="#{msjs.aceptar}" action="#{cuestionario.opinar}"/>
+					<h:commandButton value="#{msjs.resetear}" type="reset"/>
+					<h:selectBooleanCheckbox value="#{cuestionario.quieroOpinar}"/>
+					<h:outputText value="#{msjs.opinar}"/>
+					<h:outputText value="#{msjs.bienvenida}" styleClass="enfasis"/>
+					<!-- <f:loadBundle basename="mensajes" var="msjs"/> -->
+				</div>
+		</h:form>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+package Cursos;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class RegistroCurso extends JFrame
+{
+	private JPanel contentPane;
+	private JTextField txtCodigoCurso;
+	private JTextField txtNombreCurso;
+	private JTextField txtNroCreditos;
+
+	public RegistroCurso()
+	{
+		// setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pantallaPrincipal();
+		getBotoRegistrar();
+	}
+
+	void pantallaPrincipal()
+	{
+		setBounds(100, 100, 450, 170);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel lblCodigoCurso = new JLabel("Codigo Curso");
+		lblCodigoCurso.setBounds(10, 23, 103, 14);
+		contentPane.add(lblCodigoCurso);
+
+		txtCodigoCurso = new JTextField();
+		txtCodigoCurso.setBounds(145, 20, 111, 20);
+		contentPane.add(txtCodigoCurso);
+		txtCodigoCurso.setColumns(10);
+
+		JLabel lblNombreCurso = new JLabel("Nombre Curso");
+		lblNombreCurso.setBounds(10, 61, 103, 14);
+		contentPane.add(lblNombreCurso);
+
+		txtNombreCurso = new JTextField();
+		txtNombreCurso.setBounds(145, 58, 217, 20);
+		contentPane.add(txtNombreCurso);
+		txtNombreCurso.setColumns(10);
+
+		JLabel lblNumeroCreditos = new JLabel("Numero Creditos");
+		lblNumeroCreditos.setBounds(10, 100, 103, 14);
+		contentPane.add(lblNumeroCreditos);
+
+		txtNroCreditos = new JTextField();
+		txtNroCreditos.setBounds(145, 97, 86, 20);
+		contentPane.add(txtNroCreditos);
+		txtNroCreditos.setColumns(10);
+
+	}
+
+	void getBotoRegistrar()
+	{
+		JButton btnProcesar = new JButton("Procesar");
+		btnProcesar.setBounds(273, 96, 89, 23);
+		contentPane.add(btnProcesar);
+		btnProcesar.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{
+				JOptionPane.showMessageDialog(null, "funcionando");
+			}
+		});
+	}
+
+	public static void main(String[] args)
+	{
+		EventQueue.invokeLater(new Runnable()
+		{
+			public void run()
+			{
+				try
+				{
+					RegistroCurso frame = new RegistroCurso();
+					frame.setVisible(true);
+				} catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+}

@@ -1,0 +1,38 @@
+package TercerSemestreCasoEmpleado;
+
+import java.sql.*;
+
+public class ConexionMySql
+{
+	private static Connection conexion;
+
+	public ConexionMySql()
+	{
+	}
+	
+	public static void PerformConnection()
+	{
+		String host="127.0.0.1";
+		String user="root";
+		String pass="dycym2016";
+		String dtbs="mybasededatos";
+		String port="3307";
+		
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			//String newConetionUrl="jdbc:mysql://" + host + "/" + dtbs + "?" + "user=" + user + "&password" + pass;
+			String newConetionUrl="jdbc:mysql://" + host + "/" + dtbs + "?" + user +  pass;
+			conexion = DriverManager.getConnection(newConetionUrl);
+		}catch(Exception e){
+			System.out.println("Error de conexion");
+			
+		}
+	}
+	public static void main (String []args ) throws SQLException
+	{
+		PerformConnection();
+	}
+	
+
+}
